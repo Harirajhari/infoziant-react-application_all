@@ -98,14 +98,7 @@ const Blog3Detail = () => {
       >
         . Oct 16, 2024 .
       </motion.span>
-      <motion.span
-        className="read-time"
-        whileInView={{ x: 0, opacity: 1 }}
-        initial={{ x: -20, opacity: 0 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
-      >
-        2 min read
-      </motion.span>
+      
       <motion.span
         className="share-icon"
         whileInView={{ rotate: 360 }}

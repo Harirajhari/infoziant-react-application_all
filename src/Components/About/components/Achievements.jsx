@@ -68,7 +68,7 @@ const Achievements = () => {
         variants={variants}
         transition={{ duration: 2 }} // Animation timing for the whole section
       >
-        <h6>Our Statistics</h6>
+        <h6 className='h6'>Our Statistics</h6>
         <h2 className="section-title">Some of Our Achievements</h2>
         <div className="achievements-wrapper">
           {achievementsData.map((achievement) => (

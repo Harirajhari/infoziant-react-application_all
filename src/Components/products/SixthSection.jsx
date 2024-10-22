@@ -3,11 +3,16 @@ import { motion } from 'framer-motion';
 import "./SixthSection.css";
 import windowImage from '../../assests/images/productimages/window.png'; // Ensure this path is correct
 import shapeImage from '../../assests/images/chooseus_shape.png';
+import EmailForm from '../EmailForm';
 
 
 const SixthSection = () => {
   // State to manage the active tab
   const [activeTab, setActiveTab] = useState('systemRequirements'); // Default to system requirements
+  const [isemailFormOpen, setemailIsFormOpen] = useState(false);
+  const toggleemailForm = () => {
+    setemailIsFormOpen(!isemailFormOpen); // Toggle form visibility
+  };
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -107,6 +112,7 @@ const SixthSection = () => {
                   className="download_button" 
                   whileHover={{ scale: 1.05 }} 
                   whileTap={{ scale: 0.95 }}
+                  onClick={toggleemailForm}
                 >
                   Download Windows
                 </motion.button>
@@ -120,6 +126,7 @@ const SixthSection = () => {
                   className="download_button" 
                   whileHover={{ scale: 1.05 }} 
                   whileTap={{ scale: 0.95 }}
+                  onClick={toggleemailForm}
                 >
                   Download Linux
                 </motion.button>
@@ -138,6 +145,7 @@ const SixthSection = () => {
           </motion.div>
         </div>
       </div>
+      {isemailFormOpen && <EmailForm closeModal={toggleemailForm} />}
     </section>
   );
 };

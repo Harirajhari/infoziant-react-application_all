@@ -1,6 +1,5 @@
-import React from "react";
+import React,{ useRef } from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import ConsultationForm from "./ConsultationForm";
 import { Link } from "react-router-dom";
 import "./css/Vapt.css";
@@ -8,6 +7,12 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
 export default function Vapt() {
+
+  const consultationFormRef = useRef(null);
+
+  const scrollToConsultationForm = () => {
+    consultationFormRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   // Cards hover section
   const features = [
     {
@@ -155,17 +160,26 @@ export default function Vapt() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
+           
           >
-            <button className="get-started-btn">Talk to Us</button>
+            <motion.button
+            className="get-started-btn"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollToConsultationForm}
+          >
+            Talk to us
+          </motion.button>
           </motion.div>
         </motion.div>
 
         <motion.div
           className="Penetration-image"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 25   }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
+          
         >
           <img src="/assets/vapt.svg" alt="Penetration Services" />
         </motion.div>
@@ -220,8 +234,11 @@ export default function Vapt() {
       </div>
 
       {/* Consultation Form */}
-      <ConsultationForm />
-      <Footer />
+      <div ref={consultationFormRef}>
+        <ConsultationForm />
+      </div>
+
+      
     </div>
   );
 }

@@ -25,7 +25,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   font-size: 4rem;
 }
 .highlight{
-background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  background: linear-gradient(90deg, #15f5b9d0, #002affc4);
 -webkit-background-clip: text; /* For Safari */
 -webkit-text-fill-color: transparent; /* For Safari */
 background-clip: text; /* Standard */
@@ -37,17 +37,26 @@ color: transparent;
   font-size: 18px;
   font-weight: 400;
 }
-.gs-btn{
-background: linear-gradient(90deg, #15F5BA, #0066ff); /* Neon blue gradient */
+.gs-btn {
+  background: linear-gradient(45deg, #15f5b9d0, #002affc4);
+  color: #fff;
   padding: 2% 4%;
-  color: black;
   font-weight: 600;
-  font-size: 17px;
-  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), /* Softer, lighter glow */
-            0 0 10px rgba(0, 255, 255, 0.2);
+  font-size: 16px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  transition: background 0.4s ease;
 }
+
+.gs-btn:hover {
+  background: linear-gradient(185deg, #15f5b9d0, #002affc4);
+  transition: background 0.4s ease;
+  
+}
+
 .span-highlight {
   animation: blink 0.7s infinite;
 }
@@ -132,7 +141,7 @@ background: linear-gradient(90deg, #15F5BA, #0066ff); /* Neon blue gradient */
   align-items: center;
   color: white;
   background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(126, 86, 86) 90.2%);
-padding: 3% 2%;
+  padding: 3% 2%;
 }
 .count-div{
   text-align: center;
@@ -266,7 +275,7 @@ font-weight: 600;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 5%;
   }
   .func-img{
     width: 60%;

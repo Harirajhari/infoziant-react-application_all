@@ -8,9 +8,9 @@ import AboutBanner from './components/AboutBanner';
 import Achievements from './components/Achievements';
 import KeySolutions from './components/KeySolutions';
 import AppreciatedBy from './components/AppreciatedBy';
-import Navbar from "../Components/Navbar";
-import Footer from '../Components/Footer';
-import Loader from '../Components/Loader';
+import Navbar from "../Navbar";
+import Footer from '../Footer';
+import Loader from '../Loader';
 
 
 const About = () => {
@@ -38,4 +38,4 @@ const About = () => {
 };
 
 
-export default About
+export default About;

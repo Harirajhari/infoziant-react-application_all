@@ -76,82 +76,81 @@ export default function Blogs() {
           content="Explore Infoziant's blog for insights on mobile app security, firewall assessments, phishing, and effective website security tips to safeguard your data."
         />
       </Helmet>
-      
 
-<div className="blog_page">
-<Navbar />
-      <div
-        className="service-banner"
-        style={{
-          backgroundImage: "url(./assets/blog-banner.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-
-       
-        <motion.div
-          className="sb-intro"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
+      <Navbar />
+      <div className="blog_page">
+        <div
+          className="service-banner"
+          style={{
+            backgroundImage: "url(./assets/blog-banner.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          <h1 >Blogs</h1>
-          <br />
-          <p>
-            Securing mobile apps and firewalls is vital to protect against data
-            leaks, spyware, and unauthorized access.
-          </p>
-        </motion.div>
-      </div>
-      <div className="blog-container-l">
-        <div className="blog-header-l">
-          <motion.h1
-            className="blog-title-l"
-            initial={{ opacity: 0, y: -50 }}
+
+
+          <motion.div
+            className="sb-intro"
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
           >
-            All The Tips In One Place
-          </motion.h1>
+            <h1 >Blogs</h1>
+            <br />
+            <p>
+              Securing mobile apps and firewalls is vital to protect against data
+              leaks, spyware, and unauthorized access.
+            </p>
+          </motion.div>
         </div>
-        <div className="blog-grid-l">
-          {posts.map((post) => (
-            <motion.div
-              key={post.id}
-              className="blog-card-l"
-              initial={{ opacity: 0, y: 30 }}
+        <div className="blog-container-l">
+          <div className="blog-header-l">
+            <motion.h1
+              className="blog-title-l"
+              initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                ease: [0.43, 0.13, 0.23, 0.96],
-                delay: post.id * 0.15,
-              }}
+              transition={{ duration: 1, ease: "easeInOut" }}
             >
-              <div className="image-container-l">
-                <img
-                  src={post.image}
-                  alt={post.category}
-                  className="blog-image-l"
-                />
-              </div>
-              <div className="blog-content-l">
-                <p className="blog-category-l">{post.category}</p>
-                <p className="blog-title-text-l">{post.title}</p>
-                <p className="blog-author-l">
-                  {post.date} by{" "}
-                  <span className="author-name-l">{post.author}</span>
-                </p>
-                <br />
-                <Link to={post.url}>
-                  <button className="read-more-l">Read More</button>
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+              All The Tips In One Place
+            </motion.h1>
+          </div>
+          <div className="blog-grid-l">
+            {posts.map((post) => (
+              <motion.div
+                key={post.id}
+                className="blog-card-l"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.43, 0.13, 0.23, 0.96],
+                  delay: post.id * 0.15,
+                }}
+              >
+                <div className="image-container-l">
+                  <img
+                    src={post.image}
+                    alt={post.category}
+                    className="blog-image-l"
+                  />
+                </div>
+                <div className="blog-content-l">
+                  <p className="blog-category-l">{post.category}</p>
+                  <p className="blog-title-text-l">{post.title}</p>
+                  <p className="blog-author-l">
+                    {post.date} by{" "}
+                    <span className="author-name-l">{post.author}</span>
+                  </p>
+                  <br />
+                  <Link to={post.url}>
+                    <button className="read-more-l">Read More</button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-      <Footer />
+        <Footer />
       </div>
     </>
   );

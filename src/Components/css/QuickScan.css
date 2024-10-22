@@ -3,7 +3,7 @@
     text-align: center;
 }
 .quickscan-section h1{
-    font-size: 33px;
+    font-size: 2rem;
 }
 .quickscan-section p{
     margin-left: 15%;
@@ -36,15 +36,19 @@
   }
 
   .gs-btn-scan{
-    background: linear-gradient(90deg, #15F5BA, #0066ff); /* Neon blue gradient */
-    padding: 0.9% 6%;
-    color: black;
+    background: linear-gradient(45deg, #15F5BA, #0066ff); /* Neon blue gradient */
+    padding: 0.6% 4%;
+    color: rgb(255, 255, 255);
     font-weight: 500;
-    font-size: 17px;
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), /* Softer, lighter glow */
-              0 0 10px rgba(0, 255, 255, 0.2);
+    font-size: 18px;
+    transition: background 0.4s ease;
     border: none;
     border-radius: 10px;
+  }
+
+  .gs-btn-scan:hover{
+    background: linear-gradient(185deg, #15F5BA, #0066ff); /* Neon blue gradient */
+    transition: background 0.4s ease;
   }
   
   .backdrop {

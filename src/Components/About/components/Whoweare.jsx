@@ -5,10 +5,16 @@ import { motion } from 'framer-motion';
 import img1 from "../images/img1.png";
 import img2 from "../images/img2.png";
 import logo from "../images/Infoziant Logo (6) 2.png";
+import InquiryForm from "../../InquiryForm"
+
 
 const Whoweare = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const sectionRef = useRef(null);
+  const toggleForm = () => {
+    setIsFormOpen(!isFormOpen); // Toggle form visibility
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -73,6 +79,7 @@ const Whoweare = () => {
             className="get-started-btn1"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={toggleForm}
           >
             Get Started
           </motion.button>
@@ -86,6 +93,7 @@ const Whoweare = () => {
       >
         <img src={logo} alt="Background Icon" />
       </motion.div>
+      {isFormOpen && <InquiryForm closeModal={toggleForm} />}
     </section>
   );
 };

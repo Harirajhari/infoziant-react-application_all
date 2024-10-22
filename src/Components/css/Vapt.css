@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 4rem;
+    margin-top: 5%;
     color: #fff;
     /* background-color:white; */
     padding-top: 5%;
@@ -39,87 +40,21 @@
     line-height: 1.5; 
     margin-bottom:20px;
 }
+.get-started-btn {
+    background: linear-gradient(150deg, #15f5b9d0, #002affc4);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.get-started-btn:hover {
+    background: linear-gradient(100deg, #15f5b9d0, #002affc4);
+}
 
 /* Align the button to the left */
-.get-started-btn-container {
-    display: flex;
-    justify-content: flex-start; 
-    width: 100%;
-    padding-left: 10px; 
-    font-family: 'Jost', sans-serif;
-}
-
-.get-started-btn {
-    appearance: button;
-    background-color: #1899D6;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round,sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 20px 20px;
-    text-align: center;
-    text-transform: uppercase;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-  
-  .get-started-btn:after {
-    background-clip: padding-box;
-    background: linear-gradient(90deg, #15f5b9d0, #002affc4);
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
-  
-  .get-started-btn,
-  .get-started-btn:focus {
-    user-select: auto;
-  }
-  
-  .get-started-btn:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-  }
-  
-  .get-started-btn:disabled {
-    cursor: auto;
-  }
-  
-  .get-started-btn:active {
-    border-width: 4px 0 0;
-    background: none;
-  }
-  
-.get-started-btn {
-  
-    background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
-   
-    font-family: 'Jost', sans-serif;
-}
 
 .Penetration-image img {
     max-width: 90%; 
@@ -132,8 +67,9 @@
 @media (max-width: 576px) {
     .Penetration-container {
         flex-direction: column;
-        padding: 1rem;
         text-align: center; 
+        margin-top: 0%;
+        padding-top: 0%;
     }
 
     .Penetration-image {
@@ -155,7 +91,7 @@
 @media (max-width: 576px) {
     .Penetration-container {
         flex-direction: column; 
-        padding: 4rem; 
+        padding: 1.5rem; 
         text-align: center; 
     }
 
@@ -180,14 +116,7 @@
         color: #ccc;
     }
 
-    /* Minimized button size for small screens */
-    .get-started-btn {
-        font-size: 0.9em; 
-        padding: 0.4rem 0.8rem; 
-        width: auto; 
-        max-width: 180px; 
-        border-radius: 8px;
-    }
+    
 
 }
 

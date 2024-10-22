@@ -2,18 +2,14 @@ import Navbar from "./Navbar";
 import { motion } from "framer-motion";
 import "./css/HomeBanner.css";
 import { useState, useEffect } from "react";
-import CountingElement from "./CountingElement";
 import { useInView } from "react-intersection-observer";
-import { GrThreats } from "react-icons/gr";
-import { MdOutlineSecurity } from "react-icons/md";
-import { AiOutlineSolution } from "react-icons/ai";
 import TestimonialSlider from "./Testimonials";
 import QuickScan from "./QuickScan";
 import Services from "./Services";
-
 import Footer from "./Footer";
 import WhyInfoziant from "./WhyInfoziant";
 import Partnership from "./Partnership";
+import InquiryForm from "./InquiryForm";
 
 export default function HomeBanner() {
   // intersection observer start
@@ -40,6 +36,11 @@ export default function HomeBanner() {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [scanningLine, setScanningLine] = useState(true);
   const [progressLoader, setProgressLoader] = useState(true);
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
+    const toggleForm = () => {
+      setIsFormOpen(!isFormOpen); // Toggle form visibility
+    };
 
   useEffect(() => {
     const handleTyping = () => {
@@ -93,9 +94,9 @@ export default function HomeBanner() {
 
   return (
     <>
+     <Navbar />
       <section className="homeBanner-main">
-        <Navbar />
-
+      
         <ul className="home-ul">
           {/* home banner intro */}
           <motion.li
@@ -143,13 +144,13 @@ export default function HomeBanner() {
             </motion.p>
             <br />
             <motion.button
-              className="gs-btn"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
-            >
-              Get Started
-            </motion.button>
+        className="gs-btn"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={toggleForm}  // Show form when clicked
+      >
+        Get Started
+      </motion.button>
           </motion.li>
 
           {/* image animation starts */}
@@ -230,9 +231,7 @@ export default function HomeBanner() {
                             : "stopProgressLoader"
                         }
                       >
-                        <div className="pulse1"></div>
-                        <div className="pulse2"></div>
-                        <div className="pulse3"></div>
+                        
                       </div>
                     </li>
                   </ul>
@@ -242,7 +241,6 @@ export default function HomeBanner() {
           </li>
           {/* image animation ends */}
         </ul>
-
         {/* functionalities starts */}
         <ul className="func" ref={ref5}>
           <motion.li
@@ -328,6 +326,7 @@ export default function HomeBanner() {
       {/* <HomeVideo/> */}
 
       <Footer />
+      {isFormOpen && <InquiryForm closeModal={toggleForm} />}
 
     </>
   );

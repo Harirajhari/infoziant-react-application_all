@@ -18,8 +18,9 @@ import Blog3Detail from "./Components/Blog3Detail";
 import Blog4Detail from "./Components/Blog4Detail";
 import Blog5Detail from "./Components/Blog5Detail";
 import Blog6Detail from "./Components/Blog6Detail";
-
 import Loader from './Components/Loader';
+import About from "./Components/About/About";
+import Product from "./Components/products/Product";
 
 function App() {
  
@@ -45,6 +46,8 @@ function App() {
             <Route path="/cloud-infrastructure" element={<CloudInfrastructure />} />
             <Route path="/api-vapt" element={<ApiVapt />} />
             <Route path="/siem" element={<Siem />} />
+            <Route path="/about"element={<About/>}/>
+            <Route path="/product"element={<Product/>}/>
             <Route path="/contact" element={<Contact />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/blogs" element={<Blogs />} />

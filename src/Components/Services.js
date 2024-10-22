@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import "./css/Services.css";
 
 const serviceItems = [
@@ -14,43 +16,13 @@ export default function Services() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isInView, setIsInView] = useState(false);
     const servicesRef = useRef(null);
-    const lastScrollTimeRef = useRef(0);
 
-    // Throttle the scroll speed with a delay
-    const THROTTLE_DELAY = 500; // Set the delay in milliseconds
-    const SCROLL_THRESHOLD = 100; // Amount of scroll to trigger image change
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex < serviceItems.length - 1 ? prevIndex + 1 : 0));
+    };
 
-    const handleScroll = (event) => {
-        const currentTime = new Date().getTime();
-
-        if (!isInView) return;
-
-        // Throttle the scroll handler
-        if (currentTime - lastScrollTimeRef.current < THROTTLE_DELAY) {
-            return;
-        }
-
-        if (Math.abs(event.deltaY) < SCROLL_THRESHOLD) {
-            // Ignore small scrolls
-            return;
-        }
-
-        if (event.deltaY > 0) {
-            // Scroll down, but ensure currentIndex doesn't exceed the array length
-            if (currentIndex < serviceItems.length - 1) {
-                event.preventDefault();
-                setCurrentIndex(prevIndex => Math.min(prevIndex + 1, serviceItems.length - 1));
-            }
-        } else {
-            // Scroll up, but ensure currentIndex doesn't go below 0
-            if (currentIndex > 0) {
-                event.preventDefault();
-                setCurrentIndex(prevIndex => Math.max(prevIndex - 1, 0));
-            }
-        }
-
-        // Update last scroll time
-        lastScrollTimeRef.current = currentTime;
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : serviceItems.length - 1));
     };
 
     useEffect(() => {
@@ -76,21 +48,8 @@ export default function Services() {
         };
     }, []);
 
-    useEffect(() => {
-        if (isInView) {
-            window.addEventListener("wheel", handleScroll, { passive: false });
-        } else {
-            window.removeEventListener("wheel", handleScroll);
-        }
-
-        return () => {
-            window.removeEventListener("wheel", handleScroll);
-        };
-    }, [isInView, currentIndex]);
-
     return (
         <>
-            {/* services */}
             <motion.section
                 ref={servicesRef}
                 className="services-section"
@@ -101,7 +60,14 @@ export default function Services() {
                 <h1>Empowering <span className="highlight">Smart Contract Security</span> with Cutting-Edge Features</h1>
                 <p className="services-p">Our AI powered tool is packed with a diverse set of robust features designed to cater the unique requirements of Smart Contract Vulnerability Detection across organizations of all sizes in the web3 ecosystem.</p>
                 <br />
+
                 <div className="services-container">
+                    <button className="arrow-btn left-btn" onClick={handlePrev}>
+                        <FontAwesomeIcon icon={faChevronLeft} />
+                    </button>
+
+
+
                     <img
                         className="slide-img"
                         src={serviceItems[currentIndex].image}
@@ -130,9 +96,12 @@ export default function Services() {
                         <h3>{serviceItems[currentIndex].title}</h3>
                         <p>{serviceItems[currentIndex].content}</p>
                     </motion.div>
+
+                    <button className="arrow-btn right-btn" onClick={handleNext}>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </button>
                 </div>
             </motion.section>
-
 
             {/* services mobile view */}
             <section className="services-section-mobile">
@@ -164,7 +133,7 @@ export default function Services() {
                             className="service-li-m"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, ease: "easeInOut", delay: index * 0.2 }} // Delay for a cascading effect
+                            transition={{ duration: 0.8, ease: "easeInOut", delay: index * 0.2 }} // Delay for cascading effect
                             viewport={{ once: false }}
                         >
                             <img className="service-img-m" src={service.image} alt={service.id} />
@@ -178,4 +147,3 @@ export default function Services() {
         </>
     );
 }
-

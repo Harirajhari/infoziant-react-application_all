@@ -14,10 +14,34 @@ export default function Partnership() {
         './assets/partner-10.png',
         './assets/partner-11.png',
         './assets/partner-12.png',
+        './assets/partner-1.png',
+        './assets/partner-2.svg',
+        './assets/partner-3.png',
+        './assets/partner-4.png',
+        './assets/partner-5.svg',
+        './assets/partner-6.png',
+        './assets/partner-7.png',
+        './assets/partner-8.png',
+        './assets/partner-9.png',
+        './assets/partner-10.png',
+        './assets/partner-11.png',
+        './assets/partner-12.png',
+        './assets/partner-1.png',
+        './assets/partner-2.svg',
+        './assets/partner-3.png',
+        './assets/partner-4.png',
+        './assets/partner-5.svg',
+        './assets/partner-6.png',
+        './assets/partner-7.png',
+        './assets/partner-8.png',
+        './assets/partner-9.png',
+        './assets/partner-10.png',
+        './assets/partner-11.png',
+        './assets/partner-12.png',
     ];
 
     // Duplicate the images to create a seamless loop effect
-    const doubledImages = [...images, ...images,...images, ...images];
+    const doubledImages = [...images, ...images,...images, ...images,...images,...images,];
 
     return (
         <section className="partnership">
