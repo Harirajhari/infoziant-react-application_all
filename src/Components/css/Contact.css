@@ -10,153 +10,153 @@
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgb(194, 191, 191);
+    background: linear-gradient(200deg, #00ffbb32, #415afc3b);
 }
 
 .contact-header {
-    text-align: center;
-    background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 32px;
-    margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px; /* Further reduced header size */
+  margin-bottom: 20px;
 }
 
 .contact-content {
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-    padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding-left: 10px;
 }
 
 .contact-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .contact-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-item {
-    display: flex;
-    align-items: flex-start;
-    
-    background-color: #fafaff;
-    border-radius: 20px;
-    padding: 20px;
+  display: flex;
+  align-items: flex-start;
+ 
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .contact-icon {
-    width: 80px;
-    height: auto;
-    background: linear-gradient(90deg, #15F5BA, #0066ff);
-    border-radius: 50%;
-    padding: 14px;
-    color: white;
-    margin-right: 25px;
-    transition: width 0.3s ease, height 0.3s ease; /* Smooth transition */
+  width: 50px;
+  height: auto;
+  background: linear-gradient(90deg, #15F5BA, #0066ff);
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  margin-right: 25px;
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth transition */
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-info-title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    background: linear-gradient(315deg, #20bf55 0%, #01baef 74%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    color: transparent !important;
+  font-size: 20px; /* Further reduced title size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(315deg, #20bf55 0%, #01baef 74%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
 }
 
 .contact-address {
-    color: black;
-    font-size: 20px;
-    line-height: 45px;
+  color: black;
+  font-size: 16px; /* Further reduced address size */
+  line-height: 45px;
 }
 
 .contact-address p {
-    margin: 0;
+  margin: 0;
 }
 
 .contact-desc {
-    color: black;
-    font-size: 20px;
-    margin-bottom: 5px;
+  color: black;
+  font-size: 16px; /* Further reduced description size */
+  margin-bottom: 5px;
 }
-.contact-email
-{
-    height:160px;
-   
+
+.contact-email {
+  height: 160px;
 }
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-    .contact-header {
-        font-size: 24px;
-    }
-    .contact-row {
-        flex-direction: column; /* Stack items vertically */
-        gap: 40px; /* Reduce gap between items */
-    }
+  .contact-header {
+      font-size: 20px; /* Further reduced mobile header size */
+  }
+  .contact-row {
+      flex-direction: column; /* Stack items vertically */
+      gap: 40px; /* Reduce gap between items */
+  }
 
-    .contact-item {
-        display: flex;
-        flex-direction: column; /* Stack icon and text vertically */
-        align-items: center; /* Center horizontally */
-        justify-content: center; /* Center vertically */
-        padding: 15px; /* Adjust padding */
-        text-align: center; /* Center text */
-    }
+  .contact-item {
+      display: flex;
+      flex-direction: column; /* Stack icon and text vertically */
+      align-items: center; /* Center horizontally */
+      justify-content: center; /* Center vertically */
+      padding: 15px; /* Adjust padding */
+      text-align: center; /* Center text */
+  }
 
-    .contact-icon {
-        width: 60px; /* Reduce icon size */
-        height: 60px; /* Set fixed height */
-        margin-bottom: 10px; /* Add space below icon */
-        margin-right: 0; /* Remove margin-right for centering */
-    }
+  .contact-icon {
+      width: 60px; /* Reduce icon size */
+      height: 60px; /* Set fixed height */
+      margin-bottom: 10px; /* Add space below icon */
+      margin-right: 0; /* Remove margin-right for centering */
+  }
 
-    .contact-info-title {
-        font-size: 24px; /* Adjust title size */
-    }
+  .contact-info-title {
+      font-size: 20px; /* Further reduced title size */
+  }
 
-    .contact-address, .contact-desc {
-        font-size: 16px; /* Adjust address and desc size */
-        line-height:30px;
-    }
+  .contact-address, .contact-desc {
+      font-size: 14px; /* Further reduced address and desc size */
+      line-height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
-    .contact-header {
-        font-size: 20px;
-    }
-    .contact-icon {
-        width: 50px; /* Further reduce icon size */
-        height: 50px; /* Set fixed height */
-    }
+  .contact-header {
+      font-size: 18px; /* Further reduced mobile header size */
+  }
+  .contact-icon {
+      width: 50px; /* Further reduce icon size */
+      height: 50px; /* Set fixed height */
+  }
 
-    .contact-info-title {
-        font-size: 20px; /* Further adjust title size */
-    }
+  .contact-info-title {
+      font-size: 18px; /* Further reduced title size */
+  }
 
-    .contact-address, .contact-desc {
-        font-size: 14px; /* Further adjust address and desc size */
-        line-height:26px;
-    }
+  .contact-address, .contact-desc {
+      font-size: 12px; /* Further reduced address and desc size */
+      line-height: 24px;
+  }
 }
 
 
 .service-banner {
     width: 100%;
     height: 70vh;
+    margin-top: 5%;
     position: relative;
   }
   

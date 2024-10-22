@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./css/Vapt.css";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import Footer from "./Footer"
 
 export default function Vapt() {
 
@@ -237,6 +238,7 @@ export default function Vapt() {
       <div ref={consultationFormRef}>
         <ConsultationForm />
       </div>
+      <Footer></Footer>
 
       
     </div>

@@ -13,11 +13,11 @@ export default function Awards() {
   const cards = [
     { title: "Nokia", image: "./assets/nokia.png", description: "Recognized for reporting critical security vulnerabilities.", category: "Team Awards", heading:"Acknowledgement for Excellence" },
     { title: "M-Files", image: "./assets/m-files.png", description: "Acknowledged for identifying and reporting security flaws.", category: "Innovation Awards", heading:"Security Recognition Award" },
-    { title: "Zivame", image: "./assets/zivame.png", description: "Honored for contributions to enhancing security measures.", category: "Team Awards", heading:"Security Contribution Award" },
+    { title: "Zivame", image: "./assets/zivame_subpart.png", description: "Honored for contributions to enhancing security measures.", category: "Team Awards", heading:"Security Contribution Award" },
     { title: "Blackberry", image: "./assets/blackberry.png", description: "Recognized for proactive security vulnerability reporting.", category: "Individual Achievements", heading:"Security Excellence Award" },
     { title: "EU Institutions", image: "./assets/eu-institutions.png", description: "Acknowledged for significant security issue reporting.", category: "Individual Achievements", heading:"Security Recognition" },
     { title: "Scottish Government", image: "./assets/scottish-government.png", description: "Honored for outstanding security vulnerability reporting.", category: "Team Awards", heading:"Security Appreciation" },
-    { title: "International Organization for Migration", image: "./assets/iofm.png", description: "Recognized for exceptional security issue identification.", category: "Innovation Awards", heading:"Security Excellence Recognition" },
+    { title: "IOM", image: "./assets/iofm_subpart.png", description: "Recognized for exceptional security issue identification.", category: "Innovation Awards", heading:"Security Excellence Recognition" },
     { title: "Avans University", image: "./assets/avans-univ.png", description: "Acknowledged for significant contributions to security.", category: "Innovation Awards", heading:"Security Contribution Recognition" },
     { title: "Dutch Judiciary Department", image: "./assets/dutch.png", description: "Recognized for outstanding security vulnerability reporting.", category: "Individual Achievements", heading:"Security Excellence Award" }
   ];
