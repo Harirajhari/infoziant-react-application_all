@@ -1,3 +1,8 @@
+.contact_page{
+  display: flex;
+  flex-direction: column; 
+}
+
 .contact-container-section {
     width: 100%;
     max-width: 1100px;

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem;
+    padding: 4rem;
     color: #fff;
     /* background-color:white; */
     padding-top: 5%;
@@ -82,7 +82,7 @@
   
   .get-started-btn:after {
     background-clip: padding-box;
-    background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    background: linear-gradient(90deg, #15f5b9d0, #002affc4);
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
@@ -155,8 +155,8 @@
 @media (max-width: 576px) {
     .Penetration-container {
         flex-direction: column; 
+        padding: 4rem; 
         text-align: center; 
-        padding: 20% 4% 20% 4%;;
     }
 
     .Penetration-content {
@@ -166,6 +166,7 @@
     .Penetration-title-small {
         font-size: 1.4rem; 
         margin-bottom: 10px;
+        padding-top: 100px;
     }
 
     .Penetration-title-large {
@@ -391,18 +392,21 @@ card-containerflipper */
     padding: 20px 30px;
     text-align: center;
     font-size: 18px;
+    border: 1px solid rgb(143, 141, 141);
     color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     box-sizing: border-box;
+  
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
     border: 2px solid #00FFFF;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 255);
+    
 }
 
 
@@ -484,14 +488,16 @@ card-containerflipper */
 .Arrow-image {
     max-width: 80%;
     display: block;
-    margin: 40px auto;
-    padding-top:40px;
+    margin: 0px auto;
+    padding-top:50px;
+    padding-bottom: 40px;
 }
 
 @media (max-width: 1024px) {
     .Arrow-image {
         max-width: 70%;
-        margin: 30px auto;
+        margin: 0px auto;
+        padding-top:30px;
     }
 }
 
@@ -505,7 +511,8 @@ card-containerflipper */
 @media (max-width: 480px) {
     .Arrow-image {
         max-width: 80%;
-        margin: 20px auto;
+        margin: 0px auto;
+        padding-top: 40px;
     }
 }
 
@@ -529,7 +536,7 @@ card-containerflipper */
     justify-content: center;
     gap: 40px;
     background: linear-gradient(to right, #010b14, #000000); 
-    padding: 20px;
+    padding: 40px;
 }
 
 .service-card {

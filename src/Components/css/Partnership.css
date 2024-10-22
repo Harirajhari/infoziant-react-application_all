@@ -1,68 +1,102 @@
-.partnership{
-    text-align: center;
-    margin: 3% 10%;
-}
-.partnership h1{
-    font-size: 35px;
-}
-.partnership p{
-    font-size: 1.1rem;
-    color: #414040;
-    line-height: 1.6;
+.partnership {
+  text-align: center;
+  margin: 3% 6%;
+  
+  overflow: hidden; /* Hide overflow for smooth scrolling */
 }
 
-.grid-container {
-    margin-top: 3%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+.parhtership_content{
+  /* background-color: rgb(8, 8, 8); */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.partnership h1 {
+  font-size: 35px;
+}
+
+.partnership p {
+  font-size: 1.1rem;
+  color: #3c3c3c;
+  line-height: 1.6;
+}
+
+/* Ribbon container for infinite scrolling */
+.ribbon-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px; /* Space between images */
+  animation: scrollLeft 15s linear infinite; /* Infinite scrolling animation */
+  padding: 20px 0;
+  white-space: nowrap; /* Prevent line breaks to ensure horizontal scrolling */
+}
+
+.ribbon-item {
+  flex-shrink: 0; /* Prevent shrinking */
+ 
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.ribbon-item img {
+  width: auto;
+  height: 80px; /* Consistent image height */
+  object-fit: contain;
+  display: block;
+}
+
+/* Duplicate the images to create an infinite loop effect */
+.ribbon-container::before {
+  content: '';
+  display: block;
+  width: 100%; /* To keep space before the loop starts */
+}
+
+/* Infinite scrolling animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
   }
-  
-  .grid-item {
-    overflow: hidden;
-    border-radius: 8px;
-    position: relative;
-    cursor: pointer;
-    background-color: rgb(232 232 239);
-    transition: transform 0.3s ease; 
-    padding: 10%;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  .grid-image {
-    width: 60%;
-    height: 100%;
-    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
-    object-fit: contain;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .ribbon-container {
+    gap: 15px;
+    animation: scrollLeft 10s linear infinite; /* Faster scrolling for mobile */
   }
-  
-  /* Zoom the image on hover */
-  .grid-item:hover .grid-image {
-    transform: scale(1.1); /* Zoom the image to 110% of its size */
+
+  .ribbon-item img {
+    height: 60px;
   }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
+  .partnership h1 {
+    font-size: 28px;
   }
-  
-  @media (max-width: 480px) {
-    .grid-container {
-      grid-template-columns: repeat(1, 1fr);
-      margin: 2%;
-    }
-    .partnership{
-      margin: 3% 2%;
-    }
-    .partnership h1 {
-      font-size: 20px;
+
+  .partnership p {
+    font-size: 16px;
   }
-  .partnership p{
-    font-size: 15px;
+}
+
+@media (max-width: 480px) {
+  .ribbon-container {
+    gap: 10px;
+    animation: scrollLeft 8s linear infinite; /* Even faster scrolling for smaller screens */
   }
-  .grid-image{
-    width: 150px;
-    height: 40px;
+
+  .ribbon-item img {
+    height: 50px;
   }
+
+  .partnership h1 {
+    font-size: 24px;
   }
+
+  .partnership p {
+    font-size: 14px;
+  }
+}

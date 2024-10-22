@@ -108,6 +108,7 @@
 
     .banner-content h1 {
         font-size: 2rem;
+        margin-top: 30px;
         /* Adjust font size for mobile */
     }
 
@@ -133,11 +134,13 @@
 @media (max-width: 480px) {
     .about-banner-section {
         height: 30vh;
+        
         /* Further decrease height for very small screens */
     }
 
     .banner-content h1 {
         font-size: 1.6rem;
+        
         /* Adjust font size further for extra small screens */
     }
 

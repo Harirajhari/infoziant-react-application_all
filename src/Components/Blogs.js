@@ -76,8 +76,10 @@ export default function Blogs() {
           content="Explore Infoziant's blog for insights on mobile app security, firewall assessments, phishing, and effective website security tips to safeguard your data."
         />
       </Helmet>
-      <Navbar />
+      
 
+<div className="blog_page">
+<Navbar />
       <div
         className="service-banner"
         style={{
@@ -86,6 +88,7 @@ export default function Blogs() {
           backgroundPosition: "center",
         }}
       >
+
        
         <motion.div
           className="sb-intro"
@@ -93,7 +96,7 @@ export default function Blogs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
         >
-          <h1>Blogs</h1>
+          <h1 >Blogs</h1>
           <br />
           <p>
             Securing mobile apps and firewalls is vital to protect against data
@@ -149,6 +152,7 @@ export default function Blogs() {
         </div>
       </div>
       <Footer />
+      </div>
     </>
   );
 }

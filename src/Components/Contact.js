@@ -16,6 +16,8 @@ const Contact = () => {
           content="Reach out to Infoziant for innovative cybersecurity solutions. Contact us via phone or email, or fill out the form to get started!"
         />
       </Helmet>
+
+      <div className='contact_page'>
        <Navbar />
       <div
         className="service-banner"
@@ -97,6 +99,7 @@ const Contact = () => {
       </div>
       <ConsultationForm/>
       <Footer/>
+    </div>
     </div>
   );
 };

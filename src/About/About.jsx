@@ -10,11 +10,13 @@ import KeySolutions from './components/KeySolutions';
 import AppreciatedBy from './components/AppreciatedBy';
 import Navbar from "../Components/Navbar";
 import Footer from '../Components/Footer';
+import Loader from '../Components/Loader';
 
 
 const About = () => {
   return (
     <>
+    <Loader />
       <Helmet>
         <title>About Infoziant: Your Trusted Cybersecurity Partner</title>
         <meta name="description" content="Founded by industry experts, Infoziant offers cutting-edge cybersecurity solutions to safeguard your business. Trusted by Fortune 500 companies globally." />

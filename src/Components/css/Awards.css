@@ -1,3 +1,15 @@
+.sb-intro{
+  padding-top: 120px;
+  padding-left: 20px;
+}
+
+
+.awards_page {
+  display: flex;
+  flex-direction: column; /* Default for desktop view */
+}
+
+
 .category-container-award {
     display: flex;
     justify-content: center;
@@ -161,22 +173,26 @@
     color: red;
   }
 
-  @media(max-width:400px){
+  @media(max-width:480px){
+    .sb-intro{
+      padding-top: 15px;
+      padding-left: 20px;
+    }
+    
     .category-award{
       font-size: 11px;
-      padding: 0;
+      padding: 5px;
     }
-    .card-grid-award{
-      display: block;
+    .card-grid-award {
+      grid-template-columns: 1fr;
     }
-    .card-award{
+    .card-award {
       margin-bottom: 4%;
     }
     .modal-content-award {
       max-width: 95%;
       padding: 1px;
     }
-  
     .close-award {
       font-size: 20px;
       top: 5px;

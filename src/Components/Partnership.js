@@ -1,5 +1,4 @@
 import "./css/Partnership.css";
-import { motion } from "framer-motion";
 
 export default function Partnership() {
     const images = [
@@ -14,47 +13,34 @@ export default function Partnership() {
         './assets/partner-9.png',
         './assets/partner-10.png',
         './assets/partner-11.png',
-        './assets/partner-12.png'
-      ];
-  return (
-    <section className="partnership">
-      {/* Animated Title */}
-      <motion.h1
-        className="title"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        Partnering with <span className="highlight">Excellence</span> for Your Success.
-      </motion.h1>
+        './assets/partner-12.png',
+    ];
 
-      {/* Animated Paragraph */}
-      <motion.p
-        className="description"
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
-      >
-        Discover the potential of collaboration as we proudly introduce our
-        esteemed partners. These valuable partnerships enable us to deliver
-        outstanding solutions and services, supported by a network of expertise
-        and innovation.
-      </motion.p>
+    // Duplicate the images to create a seamless loop effect
+    const doubledImages = [...images, ...images,...images, ...images];
 
-      {/* Grid of images with animation */}
-      <div className="grid-container">
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className="grid-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.1 }}
-          >
-            <img src={image} alt={`Image ${index + 1}`} className="grid-image" />
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
+    return (
+        <section className="partnership">
+          <div className="parhtership_content">
+          <h1>
+                Partnering with <span className="highlight">Excellence</span> for Your Success.
+            </h1>
+            <p>
+                Discover the potential of collaboration as we proudly introduce our
+                esteemed partners. These valuable partnerships enable us to deliver
+                outstanding solutions and services, supported by a network of expertise
+                and innovation.
+            </p>
+          </div>
+
+            {/* Ribbon of images */}
+            <div className="ribbon-container">
+                {doubledImages.map((image, index) => (
+                    <div key={index} className="ribbon-item">
+                        <img src={image} alt={`Partner ${index + 1}`} />
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
 }

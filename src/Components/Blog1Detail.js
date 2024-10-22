@@ -139,7 +139,7 @@ const Blog1Detail = () => {
           {/* Blog Image */}
           <div className="blog-image-container">
             <img
-              src="./assets/blog-center-image.png"
+              src="./assets/Blog-img-1.png"
               alt="Blog Post"
               className="blog-image"
             />

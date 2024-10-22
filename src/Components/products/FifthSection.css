@@ -1,13 +1,13 @@
 .fifth-section {
   padding: 50px;
   text-align: center;
-  background-color: #0c0e11; /* Black background */
+  background-color: #ffffff; /* Background color */
 }
 
 .fifth-section h1 {
   color: #fff;
   font-size: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* Comparison Table Styling */
@@ -21,16 +21,18 @@
 
 .fifth-section .comparison-column {
   border-radius: 15px;
-  padding: 20px; /* Reduced padding */
-  min-width: 25%; /* Reduced width of the card */
-  background: linear-gradient(145deg, rgba(69, 69, 69, 0.5), rgba(255, 255, 255, 0.2));
+  padding: 20px;
+  min-width: 30%;
+  background: linear-gradient(200deg, #00ffbb32, #415afc3b);
   box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2), 0 8px 15px rgba(0, 183, 255, 0.3);
+  border: #415afc5d solid 1px;
+  color: #000000;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform: perspective(500px) rotateY(0deg); /* Initial state */
 }
 
 .fifth-section .comparison-column:hover {
-  transform: scale(1.1) rotateY(12deg); /* Scaling and rotation on hover */
+  transform: scale(1.1) rotateY(12deg);
   box-shadow: 0 12px 25px rgba(255, 255, 255, 0.5), 0 12px 25px rgba(0, 183, 255, 0.6);
 }
 
@@ -38,7 +40,7 @@
   font-size: 32px;
   text-align: center;
   margin-bottom: 25px;
-  color: #d0d0d0;
+  color: #000000;
   padding: 15px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -94,7 +96,7 @@
 .fifth-section .comparison-column ul {
   list-style-type: none;
   padding: 0;
-  color: #e7e7e7; /* Light text */
+  color: #000000;
   font-size: 18px;
 }
 
@@ -126,41 +128,122 @@
 
 .fifth-section .download-button:hover {
   transform: scale(1.1);
-  background: linear-gradient(180deg, #15F5BA, #0066FF);
+  background: linear-gradient(90deg, #15F5BA, #0066FF);
 }
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-  .fifth-section {
-    padding: 40px; /* Adjust padding for mobile */
-  }
-  
-  .fifth-section h1 {
-    font-size: 28px; /* Adjust heading font size for mobile */
-    margin-bottom: 20px; /* Reduce margin for mobile */
-  }
 
-  .fifth-section .comparison-table {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between columns */
-    padding: 20px 0; /* Adjust padding for mobile */
-    flex-wrap: nowrap; /* Prevent wrapping to keep side-by-side */
+/* Responsive Design */
+@media (max-width: 1200px) {
+  /* Tablet and smaller desktop */
+  .fifth-section h1 {
+    font-size: 32px;
   }
 
   .fifth-section .comparison-column {
-    min-width: 45%; /* Set width to allow two columns */
-    padding: 15px; /* Adjust padding for mobile */
-    flex-grow: 1; /* Allow columns to grow equally */
+    min-width: 35%; /* Adjust the size for medium screens */
   }
 
   .fifth-section .comparison-column h2 {
-    font-size: 24px; /* Slightly smaller font for mobile */
+    font-size: 28px;
   }
 
   .fifth-section .comparison-column ul li {
-    font-size: 16px; /* Adjust list item font size for mobile */
+    font-size: 18px;
+  }
+
+  .fifth-section .download-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Tablet portrait */
+  .fifth-section h1 {
+    font-size: 28px;
+  }
+
+  .fifth-section .comparison-table {
+    flex-wrap: wrap; /* Wrap columns */
+    gap: 3%; /* Reduce gap */
+  }
+
+  .fifth-section .comparison-column {
+    min-width: 45%; /* Take more width for smaller screens */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .fifth-section .comparison-column h2 {
+    font-size: 24px;
+  }
+
+  .fifth-section .comparison-column ul li {
+    font-size: 16px;
   }
 
   .fifth-section .free-icon, .fifth-section .premium-icon {
-    font-size: 18px; /* Adjust icon size for mobile */
+    font-size: 20px;
+  }
+
+  .fifth-section .download-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile devices */
+  .fifth-section {
+    padding: 40px;
+  }
+
+  .fifth-section h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .fifth-section .comparison-table {
+    display: block; /* Stacks the columns */
+    padding: 20px 0;
+  }
+
+  .fifth-section .comparison-column {
+    min-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .fifth-section .comparison-column h2 {
+    font-size: 20px;
+  }
+
+  .fifth-section .comparison-column ul li {
+    font-size: 14px;
+  }
+
+  .fifth-section .free-icon, .fifth-section .premium-icon {
+    font-size: 18px;
+  }
+
+  .fifth-section .download-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile */
+  .fifth-section h1 {
+    font-size: 20px;
+  }
+
+  .fifth-section .comparison-column h2 {
+    font-size: 18px;
+  }
+
+  .fifth-section .comparison-column ul li {
+    font-size: 12px;
+  }
+
+  .fifth-section .download-button {
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }

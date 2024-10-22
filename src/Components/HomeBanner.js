@@ -10,7 +10,7 @@ import { AiOutlineSolution } from "react-icons/ai";
 import TestimonialSlider from "./Testimonials";
 import QuickScan from "./QuickScan";
 import Services from "./Services";
-import Slider from "./Slider";
+
 import Footer from "./Footer";
 import WhyInfoziant from "./WhyInfoziant";
 import Partnership from "./Partnership";
@@ -296,7 +296,7 @@ export default function HomeBanner() {
 
       {/* why infoziant section ends */}
 
-      <Services />
+    
 
 
 
@@ -321,8 +321,8 @@ export default function HomeBanner() {
       {/* Partnership */}
       <Partnership/>
 
-      <Slider/>
-
+      <Services />
+     
       <TestimonialSlider />
 
       {/* <HomeVideo/> */}

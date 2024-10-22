@@ -1,8 +1,8 @@
 .services-section {
     text-align: center;
-    height: 120vh;
+    height: 88vh;
     padding: 3% 2%;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 
 }
 
@@ -11,12 +11,12 @@
   }
 
 .services-section h1{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 30px;
 }
 
 .services-p{
-    color: #4f4a4a;
+    color: #ffffff;
     width: 60%;
     margin: auto;
     font-weight: 400;
@@ -42,7 +42,7 @@
 .vertical-line {
     height: 300px;
     width: 1px;
-    background-color: rgb(179, 177, 177); 
+    background-color: rgb(255, 255, 255); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +60,7 @@
     text-align: left;
     width: 40%;
     margin-left: 2%;
-    color: white;
+    color: rgb(240, 240, 240);
 }
 
 .service-text h3{
@@ -72,7 +72,7 @@
 }
 
 .service-text p{
-    color: #4f4a4a;
+    color: #ebebeb;
     font-weight: 400;
     font-size: 17px;
     line-height: 30px;
@@ -80,7 +80,7 @@
 
 
 /* responsiveness */
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .services-section {
       display: none;
     }

@@ -48,18 +48,24 @@ export default function Awards() {
         />
       </Helmet>
 
-      <motion.div
-        className="service-banner"
-        style={{
-          backgroundImage: "url(./assets/awards-banner-img.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <Navbar />
+
+
+     
+      <div className="awards_page">
+  <Navbar />
+  <motion.div
+    className="service-banner"
+    style={{
+      backgroundImage: "url(./assets/awards-banner-img.png)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+  > 
+
+     
 
         <motion.div className="sb-intro" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <h1>Awards & Appreciation</h1>
@@ -135,6 +141,7 @@ export default function Awards() {
         </motion.div>
       )}
       <Footer />
+      </div>
     </>
   );
 }

@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import './Product.css';
-import productImage from '../../assests/images/info-img-1.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import videoimage from "../../assests/images/videoimg.png";
 import ThirdSection from "./CardSlider";
 import FifthSection from "./FifthSection";
 import SixthSection from './SixthSection';
-import shieldIcon from '../../assests/SVG/shield-svgrepo-com.svg';
-import lockIcon from '../../assests/SVG/lock-portrait-svgrepo-com.svg';
-import qrScanIcon from '../../assests/SVG/qr-scan.svg';
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import FirstSection from "./FirstSection"
+import Loader from '../Loader';
 
 
 const Product = () => {
@@ -25,6 +23,7 @@ const Product = () => {
 
   return (
     <>
+    <Loader />
       <Helmet>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,26 +42,7 @@ const Product = () => {
       </Helmet>
       <div className="product-page">
         <Navbar />
-        <section className="first-section">
-          <h1>Infoziant DAST: Elevating Your Web Application Security</h1>
-          <div className='contain'>
-            <div className='text'>
-              <p className='desc'>
-                Infoziant’s Dynamic Application Security Testing <span className='hightlights'>(DAST)</span>
-                <p className='para-inside-desc'>  Scanner protects web applications with real-time vulnerability detection. Using advanced technology, it delivers comprehensive automated and manual assessments. Stay resilient and secure against evolving cyber threats with Infoziant DAST.</p>
-              </p>
-              <div className="animated_icons">
-                <img src={shieldIcon} alt="Security" className="animated-icon" />
-                <img src={lockIcon} alt="Lock" className="animated-icon" />
-                <img src={qrScanIcon} alt="Scanning" className="animated-icon" />
-              </div>
-
-            </div>
-            <div className="product-image-container">
-              <img src={productImage} alt="Infoziant Shield" className="product-image shake-effect" />
-            </div>
-          </div>
-        </section>
+        <FirstSection/>
         <section className="second-section">
           <h1>Infoziant DAST Tool</h1>
 
@@ -113,6 +93,7 @@ const Product = () => {
         <ThirdSection />
         <FifthSection />
         <SixthSection />
+        
         <Footer />
       </div>
     </>
