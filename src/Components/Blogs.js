@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import { IoChevronForward } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 export default function Blogs() {
