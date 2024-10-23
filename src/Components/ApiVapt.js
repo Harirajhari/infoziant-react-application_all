@@ -15,7 +15,7 @@ import { Helmet } from "react-helmet";
 const serviceListData = [
   {
     id: 1,
-    title: ".How Do Our Vulnerability Assessments Improve Security?",
+    title: "How Do Our Vulnerability Assessments Improve Security?",
     content:
       "Our vulnerability assessments dive deep into your technology architecture to identify hidden weaknesses. By analyzing each component, we enhance security at every level of your infrastructure. This ensures that critical data assets are well-protected from potential threats. Our approach strengthens your overall security posture and mitigates risks effectively.",
     image: "./assets/s4-1.jpg",
@@ -181,7 +181,7 @@ export default function ApiVapt() {
             <motion.img
               className="sl-title-img"
               src="./assets/service-banner-4.png"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
           </motion.li>

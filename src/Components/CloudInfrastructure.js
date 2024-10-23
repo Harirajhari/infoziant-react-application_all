@@ -186,7 +186,7 @@ export default function CloudInfrastructure() {
             <motion.img
               className="sl-title-img"
               src="./assets/service-banner-3.png"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
           </motion.li>
