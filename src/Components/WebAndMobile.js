@@ -7,7 +7,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { BsFillOctagonFill } from "react-icons/bs";
 import ConsultationForm from "./ConsultationForm";
 import ServiceCards from "./ServiceCards";
 import { Helmet } from "react-helmet";
@@ -183,7 +182,7 @@ export default function WebAndMobile() {
             <motion.img
               className="sl-title-img"
               src="./assets/service-banner-2.png"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
           </motion.li>

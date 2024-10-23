@@ -182,7 +182,7 @@ export default function NetworkInfrastructure() {
             <motion.img
               className="sl-title-img"
               src="./assets/service-banner-1.png"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
           </motion.li>
