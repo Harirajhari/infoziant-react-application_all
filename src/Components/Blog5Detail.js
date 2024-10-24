@@ -176,7 +176,7 @@ const Blog5Detail = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, delay: 0.2 }}
   >
-   Firewalls play a crucial role in elevating an organizationâ€™s security framework by preventing unauthorized access to critical systems. Advanced firewalls, such as Next-Generation Firewalls (NGFW) and Unified Threat Management (UTM) devices, offer enhanced protection through features like Intrusion Prevention Systems (IPS). This multi-layered security approach ensures that malicious traffic is effectively blocked before it can cause damage. 
+   Firewalls play a crucial role in elevating an organizations security framework by preventing unauthorized access to critical systems. Advanced firewalls, such as Next-Generation Firewalls (NGFW) and Unified Threat Management (UTM) devices, offer enhanced protection through features like Intrusion Prevention Systems (IPS). This multi-layered security approach ensures that malicious traffic is effectively blocked before it can cause damage. 
    Regular firewall assessments are essential for testing their efficiency and identifying configuration flaws.
   </motion.p>
 
@@ -187,7 +187,7 @@ const Blog5Detail = () => {
     whileInView={{ scale: 1, opacity: 1 }}
     transition={{ duration: 1, delay: 0.4 }}
   >
-     â€œRegular assessments of firewalls are not just beneficial; they are essential for robust security.â€ 
+    Regular assessments of firewalls are not just beneficial; they are essential for robust security.
   </motion.p>
 
   {/* Second paragraph animation */}

@@ -174,7 +174,7 @@ const Blog6Detail = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, delay: 0.2 }}
   >
-    In 2024, ensuring website security is more critical than ever, as cyber threats continue to evolve. With increasing reliance on online platforms, businesses must adopt proactive measures to protect sensitive data and maintain trust with users. From preventing data breaches to securing financial transactions, enhancing website security not only safeguards your site but also reinforces your brandâ€™s credibility. By staying ahead of emerging threats and implementing up-to-date security protocols, 
+    In 2024, ensuring website security is more critical than ever, as cyber threats continue to evolve. With increasing reliance on online platforms, businesses must adopt proactive measures to protect sensitive data and maintain trust with users. From preventing data breaches to securing financial transactions, enhancing website security not only safeguards your site but also reinforces your brands credibility. By staying ahead of emerging threats and implementing up-to-date security protocols, 
     you reduce the risk of costly cyberattacks that can lead to loss of data, reputation damage, and financial loss.
   </motion.p>
 
@@ -195,7 +195,7 @@ const Blog6Detail = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, delay: 0.6 }}
   >
-    To enhance your website's security, itâ€™s essential to prioritize a multi-layered approach that includes both technical safeguards and user awareness. Implementing stronger authentication methods, regularly updating software, and securing data transmission are key measures that can fortify your defenses. Additionally, training users to recognize phishing attempts and employing web application firewalls can further protect against potential threats. 
+    To enhance your website's security, it essential to prioritize a multi-layered approach that includes both technical safeguards and user awareness. Implementing stronger authentication methods, regularly updating software, and securing data transmission are key measures that can fortify your defenses. Additionally, training users to recognize phishing attempts and employing web application firewalls can further protect against potential threats. 
     Here are five effective ways to boost your website security in 2024.
   </motion.p>
 

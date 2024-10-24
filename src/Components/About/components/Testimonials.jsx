@@ -35,9 +35,9 @@ const Testimonials = () => {
     {
       id: 1,
       stars: '⭐⭐⭐⭐⭐',
-      quote: 'Infoziant has been associated with Keenan & Associates for more than 5 years, and the security testing services provided by them make our application free from security threats. Tony and team are very supportive as they respond to us any time round the clock.',
+      quote: 'Infoziant has been associated with Keenan &amp Associates for more than 5 years, and the security testing services provided by them make our application free from security threats. Tony and team are very supportive as they respond to us any time round the clock.',
       name: 'Mr. Bharat Saoji',
-      position: 'Vice President IT, Keenan & Associates',
+      position: 'Vice President IT, Keenan &amp Associates',
       profileImage: profile2 // import or pass the image URL here
     },
     {

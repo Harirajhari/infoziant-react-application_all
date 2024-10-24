@@ -149,7 +149,7 @@ const Blog4Detail = () => {
         variants={fadeInUp}
         transition={{ duration: 0.7 }}
       >
-           A firewall is the first line of defense for your organizationâ€™s IT infrastructure, filtering traffic to block potential threats.
+           A firewall is the first line of defense for your organizations IT infrastructure, filtering traffic to block potential threats.
            It protects sensitive data by monitoring and controlling incoming and outgoing connections.
             </motion.p>
 
@@ -187,7 +187,7 @@ const Blog4Detail = () => {
     whileInView={{ scale: 1, opacity: 1 }}
     transition={{ duration: 1, delay: 0.4 }}
   >
- â€œA firewall is only as strong as its configuration and the regular assessments it undergoes.â€   
+ A firewall is only as strong as its configuration and the regular assessments it undergoes.
   </motion.p>
 
   {/* Second paragraph animation */}

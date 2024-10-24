@@ -1,11 +1,11 @@
 import React,{ useRef } from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import ConsultationForm from "./ConsultationForm";
 import { Link } from "react-router-dom";
 import "./css/Vapt.css";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import Footer from "./Footer"
 
 export default function Vapt() {
 
@@ -14,6 +14,7 @@ export default function Vapt() {
   const scrollToConsultationForm = () => {
     consultationFormRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   // Cards hover section
   const features = [
     {
@@ -161,26 +162,18 @@ export default function Vapt() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
-           
-          >
-            <motion.button
-            className="get-started-btn"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
             onClick={scrollToConsultationForm}
           >
-            Talk to us
-          </motion.button>
+            <button className="get-started-btn">Talk to Us</button>
           </motion.div>
         </motion.div>
 
         <motion.div
           className="Penetration-image"
-          initial={{ opacity: 0, x: 25   }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
-          
         >
           <img src="/assets/vapt.svg" alt="Penetration Services" />
         </motion.div>
@@ -189,7 +182,14 @@ export default function Vapt() {
       {/* vapt cards */}
       <div className="services-container-cards">
         {services.map((service, index) => (
-          <div key={index} className="service-card">
+          <motion.div
+            key={index}
+            className="service-card"
+            initial={{ opacity: 0, scale: 0.9, y: 20 }} // Start with low opacity, slightly scaled down and below
+            whileInView={{ opacity: 1, scale: 1, y: 0 }} // Transition to full visibility, normal scale, and position
+            transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
+            viewport={{ once: false, amount: 0.2 }} // Trigger animation every time it comes into view
+          >
             <div className="image-container-cards">
               <img
                 src={service.imgSrc}
@@ -201,7 +201,7 @@ export default function Vapt() {
               <div className="icon-container">
                 <img
                   src={service.iconSrc}
-                  alt={`${service.title} Icon`}
+                  alt={service.title} // Fixed template string syntax
                   className="service-icon"
                 />
               </div>
@@ -211,36 +211,45 @@ export default function Vapt() {
                 Read More &gt;
               </Link>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       <div className="feature-container">
         {/* <h2>Why Choose Infoziant for VAPT?</h2> */}
-        <img
+        <motion.img
           className="Arrow-image"
           src="/assets/Arrow-image.png"
           alt="Features arrow"
+          initial={{ opacity: 0, y: -20 }} // Start with low opacity and above position
+          whileInView={{ opacity: 1, y: 0 }} // Transition to full opacity and normal position
+          transition={{ duration: 0.5, ease: "easeOut" }} // Animation duration and easing
+          viewport={{ once: false, amount: 0.2 }} // Trigger animation every time it comes into view
         />
         <div className="feature-grid">
           {features.map((feature, index) => (
-            <div className="feature-card" key={index}>
+            <motion.div
+              className="feature-card"
+              key={index}
+              initial={{ opacity: 0, y: 20 }} // Initial state for feature cards
+              whileInView={{ opacity: 1, y: 0 }} // State when in view
+              transition={{ duration: 0.6, ease: "easeOut" }} // Animation settings
+              viewport={{ once: false, amount: 0.2 }} // Trigger animation on every view
+            >
               <div className="feature-content">
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
       {/* Consultation Form */}
       <div ref={consultationFormRef}>
-        <ConsultationForm />
+      <ConsultationForm />
       </div>
-      <Footer></Footer>
-
-      
+      <Footer />
     </div>
   );
 }

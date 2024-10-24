@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="company-details">
             <p><FaPhone /> +1 (314) 732 0300, +91 96000 85988</p>
             <p><FaEnvelope /> support@infoziant.com</p>
-            <p><FaMapMarkerAlt /> Chennai: India Office: Akshaya HQ, Rajiv Gandhi Salai, Kazhipattur, Tamil Nadu, Chennai - 603103, India</p>
+            <p><FaMapMarkerAlt /> Chennai: Akshaya HQ, Rajiv Gandhi Salai, Kazhipattur, Tamil Nadu, Chennai - 603103, India</p>
             <p><FaMapMarkerAlt /> Singapore: 60 Paya Lebar Road, #07-39, Paya Lebar Square, Singapore 409051</p>
             <p><FaMapMarkerAlt /> Dubai: Suite #724, Tamani Arts, Business Bay, Dubai, UAE</p>
             <p><FaMapMarkerAlt /> United States: 1401, 21st ST STE 6310, Sacramento, CA 95811, USA</p>

@@ -123,6 +123,67 @@
 /* Media Queries for Responsiveness */
 
 /* Small screens (up to 480px) */
+@media (max-width: 568px) {
+    .services-section h1 {
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+    }
+
+    .vertical-line-service {
+        width: 300px;
+        height: 2px;
+        margin: 10% 0%;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+       
+        margin-left: 0;
+    }
+    .item-id-servive {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 50%;
+    }
+    
+
+    .slide-img {
+        width: 100%;
+    }
+    .left-btn {
+        left: 2%;
+        top: 60%;
+    }
+    .right-btn {
+        right: 2%;
+        top:60%;
+    }
+
+    .service-text {
+        width: 90%;
+        font-size: 15px;
+    }
+    .service-text h3{
+        font-size: 1.2rem;
+        margin-bottom: 2%;
+    }
+
+    .arrow-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .services-p {
+        color: #ffffff;
+        width: 90%;
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
 @media (max-width: 480px) {
     .services-section h1 {
         color: rgb(255, 255, 255);
@@ -155,11 +216,11 @@
     }
     .left-btn {
         left: 2%;
-        top: 50%;
+        top: 60%;
     }
     .right-btn {
         right: 2%;
-        top: 50%;
+        top: 60%;
     }
 
     .service-text {
@@ -183,5 +244,47 @@
         line-height: 25px;
     }
 }
+@media (max-width: 475px) {
+
+    .left-btn {
+        left: 2%;
+        top: 55%;
+    }
+    .right-btn {
+        right: 2%;
+        top: 55%;
+    }
+    .arrow-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 365px) {
+
+    .left-btn {
+        left: 2%;
+        top: 45%;
+    }
+    .right-btn {
+        right: 2%;
+        top: 45%;
+    }
+    .arrow-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .vertical-line-service {
+        width: 200px;
+        height: 2px;
+        margin: 10% 0%;
+    }
+
+}
+
+
 
 
