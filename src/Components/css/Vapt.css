@@ -116,7 +116,9 @@
         color: #ccc;
     }
 
-    
+    .get-started-btn{
+        float: left;
+    }
 
 }
 

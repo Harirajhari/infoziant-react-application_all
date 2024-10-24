@@ -6,6 +6,10 @@
     padding: 1% 1% 5% 1%;
 }
 
+.sl-mv{
+    list-style-type: none;
+}
+
 .service-banner{
     width: 100%;
     height: 70vh;
@@ -202,7 +206,7 @@
     border: 1px solid #15F5BA;
 }
 
-.vertical-line {
+/* .vertical-line {
     height: 300px;
     width: 1px;
     background-color: rgb(179, 177, 177); 
@@ -210,7 +214,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 20px;
-}
+} */
 
 .item-id {
     font-size: 1.5rem;

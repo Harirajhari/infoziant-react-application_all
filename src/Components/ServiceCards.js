@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { GrThreats } from "react-icons/gr";
 import { MdOutlineSecurity } from "react-icons/md";
 import { AiOutlineSolution } from "react-icons/ai";
+import {Link} from "react-router-dom"
 
 export default function ServiceCards(){
     const { ref: ref1, inView: inView1 } = useInView({
@@ -47,6 +48,7 @@ export default function ServiceCards(){
             services tailored to safeguard your data and infrastructure.
           </p>
           <br />
+          <Link to="/contact">
           <motion.button
             className="gs-btn"
             initial={{ opacity: 0, y: 30 }}
@@ -55,6 +57,8 @@ export default function ServiceCards(){
           >
             Get Started
           </motion.button>
+          </Link>
+          
         </motion.li>
 
         <li className="feature-li-2">

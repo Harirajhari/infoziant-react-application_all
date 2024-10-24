@@ -300,7 +300,7 @@ export default function NetworkInfrastructure() {
 
           <br />
 
-          <ul>
+          <ul className="sl-mv">
             {serviceListData.map((service, index) => (
               <motion.li
                 key={service.id}

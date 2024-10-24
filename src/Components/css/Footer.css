@@ -54,13 +54,21 @@
     width: 60%;
 }
 
+.footer-links-section{
+    margin-top: 5%;
+}
+
 .footer-links-section h4 {
-    color: #15F5BA; /* Bright accent color */
     margin-bottom: 15px;
     font-size: 20px;
-    border-bottom: 2px solid #15F5BA;
+    /* border-bottom: 2px solid #15F5BA; */
     padding-bottom: 10px;
     transition: color 0.3s ease;
+    background: linear-gradient(90deg, #15f5b9d0, #002affc4);
+-webkit-background-clip: text; /* For Safari */
+-webkit-text-fill-color: transparent; /* For Safari */
+background-clip: text; /* Standard */
+color: transparent;
 }
 
 .footer-links-section h4:hover {
@@ -89,7 +97,7 @@
 .footer-copyright {
     text-align: center;
     padding: 12px 0;
-    background-color: #000000; /* Black background for copyright */
+    background: linear-gradient(to right, #010b14, #000000);
     color: rgb(213, 210, 210); /* Lighter gray */
     font-size: 15px;
     letter-spacing: 0.5px;

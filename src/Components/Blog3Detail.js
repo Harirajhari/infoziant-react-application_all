@@ -188,7 +188,7 @@ Taking these steps can significantly reduce your risk of falling victim to these
     whileInView={{ scale: 1, opacity: 1 }}
     transition={{ duration: 1, delay: 0.4 }}
   >
- "Stay alert: not every email or message is what it seems; phishing can hook even the savviest online users."  
+"Stay alert: not every message is what it seems; phishing can hook even the savviest users."
   </motion.p>
 
   {/* Second paragraph animation */}
@@ -217,7 +217,7 @@ Staying Safe from Phishing Attacks
     whileInView={{ scale: 1, opacity: 1 }}
     transition={{ duration: 1, delay: 1 }}
   >
-"Stay alert: not every message is what it seems; phishing can hook even the savviest users."
+"Trust, but verify: a moment's doubt can save you from phishing traps."
   </motion.p>
 </motion.div>
 

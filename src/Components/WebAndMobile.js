@@ -299,7 +299,7 @@ export default function WebAndMobile() {
 
           <br />
 
-          <ul>
+          <ul className="sl-mv">
             {serviceListData.map((service, index) => (
               <motion.li
                 key={service.id}

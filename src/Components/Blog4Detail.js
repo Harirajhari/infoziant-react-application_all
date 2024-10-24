@@ -149,7 +149,7 @@ const Blog4Detail = () => {
         variants={fadeInUp}
         transition={{ duration: 0.7 }}
       >
-           A firewall is the first line of defense for your organizations IT infrastructure, filtering traffic to block potential threats.
+           A firewall is the first line of defense for your organization's IT infrastructure, filtering traffic to block potential threats.
            It protects sensitive data by monitoring and controlling incoming and outgoing connections.
             </motion.p>
 
@@ -176,7 +176,7 @@ const Blog4Detail = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, delay: 0.2 }}
   >
-   To maintain a strong digital fortress, organizations must adopt a proactive approach to cybersecurity. This involves regularly training employees to recognize phishing attempts and social engineering attacks that can bypass even the strongest defenses. Employee awareness is key, as human error often leads to security breaches. Additionally, proper password management and using multi-factor authentication can further enhance protection. 
+   To maintain a strong digital fortress, organization must adopt a proactive approach to cybersecurity. This involves regularly training employees to recognize phishing attempts and social engineering attacks that can bypass even the strongest defenses. Employee awareness is key, as human error often leads to security breaches. Additionally, proper password management and using multi-factor authentication can further enhance protection. 
    Building a culture of vigilance is essential for safeguarding sensitive information and maintaining organizational security.
   </motion.p>
 
@@ -187,8 +187,8 @@ const Blog4Detail = () => {
     whileInView={{ scale: 1, opacity: 1 }}
     transition={{ duration: 1, delay: 0.4 }}
   >
- A firewall is only as strong as its configuration and the regular assessments it undergoes.
-  </motion.p>
+
+"Strengthen your digital fortress with awareness, vigilance, and proactive security measures."  </motion.p>
 
   {/* Second paragraph animation */}
   <motion.p
@@ -196,8 +196,8 @@ const Blog4Detail = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, delay: 0.6 }}
   >
-   Continuous monitoring and analysis of network traffic are crucial for identifying potential threats in real-time. By implementing advanced security tools and strategies, organizations can quickly detect and respond to unusual activity before it escalates. Regular security assessments and updates ensure that systems remain protected against evolving cyber threats. Itâ€™s not just about having security tools in place but constantly evaluating and refining them. Ultimately, fostering a culture of security awareness 
-   strengthens the organizationâ€™s ability to defend against persistent and emerging cyber risks.
+   Continuous monitoring and analysis of network traffic are crucial for identifying potential threats in real-time. By implementing advanced security tools and strategies, organizations can quickly detect and respond to unusual activity before it escalates. Regular security assessments and updates ensure that systems remain protected against evolving cyber threats. It's not just about having security tools in place but about constantly evaluating and refining them. Ultimately, 
+   fostering a culture of security awareness strengthens the organization's ability to defend against persistent and emerging cyber risks.
   </motion.p>
 
   {/* Second heading animation */}

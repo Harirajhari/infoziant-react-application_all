@@ -39,7 +39,7 @@ const Blog6Detail = () => {
     },
     {
       image: "./assets/blog-1-image.png",
-      title: 'Fortifying Mobile App Security',
+      title: '   Fortifying Mobile App Security',
       views: 0,
       likes: 2,
       url:"/fortifying-mobile-app-security",
@@ -195,7 +195,7 @@ const Blog6Detail = () => {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1, delay: 0.6 }}
   >
-    To enhance your website's security, it essential to prioritize a multi-layered approach that includes both technical safeguards and user awareness. Implementing stronger authentication methods, regularly updating software, and securing data transmission are key measures that can fortify your defenses. Additionally, training users to recognize phishing attempts and employing web application firewalls can further protect against potential threats. 
+    To enhance your website's security, it is essential to prioritize a multi-layered approach that includes both technical safeguards and user awareness. Implementing stronger authentication methods, regularly updating software, and securing data transmission are key measures that can fortify your defenses. Additionally, training users to recognize phishing attempts and employing web application firewalls can further protect against potential threats. 
     Here are five effective ways to boost your website security in 2024.
   </motion.p>
 
