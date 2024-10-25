@@ -118,7 +118,43 @@
       margin-bottom: 10%;
     }
     .testimonial-content{
+      font-size: 18px;
+      line-height: 20px;
+      height: 25vh;
+      margin-bottom: 60px;
+    }
+    .testimonial-name{
       font-size: 14px;
+    }
+    .testimonial-title{
+      font-size: 13px;
+    }
+    .testimonial-img{
+      width: 40px;
+      height: 40px;
+    }
+    .testimonial-content{
+      margin-bottom: 0;
+    }
+  }
+  
+  
+  /* responsiveness */
+  @media(max-width:480px){
+    .testimonial-intro h2{
+      font-size: 12px;
+    }
+    .testimonial-container{
+      display: block;
+    }
+    .testimonial-intro p{
+      font-size: 15px;
+    }
+    .testimonial-intro{
+      margin-bottom: 10%;
+    }
+    .testimonial-content{
+      font-size: 18px;
       line-height: 20px;
       height: 25vh;
       margin-bottom: 60px;

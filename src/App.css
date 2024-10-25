@@ -170,6 +170,46 @@
   font-weight: bold;
 }
 
+@media (max-width:1000px){
+    .anm-img{
+      margin-left: 0;
+      margin-top: 0%;
+      padding: 2%;
+    }
+    .container{
+      width: 180px;
+      height: 180px;
+      margin-left: -10%;
+    }
+    .scanning-line{
+      width: 200px;
+      left: 15%;
+    }
+    .top-left{
+      top: 25%;
+      left: 5%;
+    }
+    .top-right{
+      top: 25%;
+      right: 3%;
+    }
+    .bottom-left{
+      top: 90%;
+      left: 5%;
+    }
+    .bottom-right{
+      top: 90%;
+      right: 3%;
+    }
+    .box2, .box3{
+      top: 10px;
+    }
+    .border-container{
+      height: 400px;
+    }
+}
+
+
 @media (max-width: 568px){
   .anm-img{
     margin-left: 0;

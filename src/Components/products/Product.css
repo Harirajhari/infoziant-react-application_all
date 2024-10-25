@@ -163,8 +163,9 @@
     text-align: center;
   }
   .first-section .product-image {
-    max-width: 60%;
+    max-width: 50%;
     animation: shake 8s infinite;
+    margin-left: 175px;
   }
 }
 

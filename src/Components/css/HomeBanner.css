@@ -239,6 +239,31 @@ font-weight: 600;
 }
 
 
+@media (max-width : 1000px){
+  .banner-intro{
+    padding: 2%;
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 100px;
+  }
+  .discount{
+    font-size: 4px;
+    width: auto;
+    margin-top:10%;
+  }
+  .typing-anm{
+    font-size: 4vw;
+    text-align: center;
+  }
+  .scan-img{
+    object-fit: cover;
+    width: 70%;
+    height: 70%;
+  }
+  .func-img{
+    width: 60%;
+  }
+}
 
 
 @media (max-width: 568px){

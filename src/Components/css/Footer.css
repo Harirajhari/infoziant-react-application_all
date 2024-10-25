@@ -129,6 +129,33 @@ color: transparent;
     }
 
     .footer-options {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    .footer-links-section h4 {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-company-info {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .footer-options {
         width: 100%;
         flex-direction: column;
         align-items: center;

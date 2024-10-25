@@ -7,7 +7,6 @@
   background: linear-gradient(0deg, #15F5BA, #0066ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 .blog-container-l {
@@ -110,6 +109,17 @@
   }
   
   @media (max-width: 768px) {
+    .blog-grid-l {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .blog-title-l{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
     .blog-grid-l {
       grid-template-columns: 1fr;
       gap: 20px;

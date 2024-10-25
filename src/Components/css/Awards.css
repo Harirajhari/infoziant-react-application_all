@@ -200,3 +200,31 @@
     }
   }
   
+
+  @media(max-width:768px){
+    .sb-intro{
+      padding-top: 0px;
+      padding-left: 20px;
+    }
+    
+    .category-award{
+      font-size: 11px;
+      padding: 5px;
+    }
+    .card-grid-award {
+      grid-template-columns: 1fr;
+    }
+    .card-award {
+      margin-bottom: 4%;
+    }
+    .modal-content-award {
+      max-width: 95%;
+      padding: 1px;
+    }
+    .close-award {
+      font-size: 20px;
+      top: 5px;
+      right: 10px;
+    }
+  }
+  
