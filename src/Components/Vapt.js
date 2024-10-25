@@ -1,4 +1,4 @@
-import React,{ useRef } from "react";
+import React, { useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ConsultationForm from "./ConsultationForm";
@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import "./css/Vapt.css";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+
+import { FaCloud, FaFileAlt, FaTachometerAlt, FaCheckCircle, FaCogs, FaShieldAlt } from 'react-icons/fa';
 
 export default function Vapt() {
 
@@ -107,143 +109,169 @@ export default function Vapt() {
     },
   ];
 
+  const steps = [
+    { step: 1, title: 'Discover & Crawl', icon: <FaCloud /> },
+    { step: 2, title: 'Assess Risk', icon: <FaFileAlt /> },
+    { step: 3, title: 'Detect', icon: <FaTachometerAlt /> },
+    { step: 4, title: 'Resolve', icon: <FaCheckCircle /> },
+    { step: 5, title: 'Integrate', icon: <FaCogs /> },
+    { step: 6, title: 'Continuously Secure', icon: <FaShieldAlt /> }
+  ];
+
   return (
     <div className="App-vapt">
-  <Helmet>
-    <title>Vulnerability Assessment & Penetration Testing Services</title>
-    <meta
-      name="description"
-      content="Strengthen your security with Infoziant's VAPT services. We identify vulnerabilities in networks, apps, and cloud environments to protect your data assets."
-    />
-    <link rel="canonical" href="http://example.com" />
-  </Helmet>
-  <Navbar />
-  <div className="Penetration-container">
-    <motion.div
-      className="Penetration-content"
-      initial={{ opacity: 0, x: -20 }} // Reduced initial x shift
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
-    >
-      <motion.h4
-        className="Penetration-title-small"
-        initial={{ opacity: 0, y: -10 }} // Reduced y shift
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        Vulnerability Assessment / Penetration Testing (VAPT)
-      </motion.h4>
+      <Helmet>
+        <title>Vulnerability Assessment & Penetration Testing Services</title>
+        <meta
+          name="description"
+          content="Strengthen your security with Infoziant's VAPT services. We identify vulnerabilities in networks, apps, and cloud environments to protect your data assets."
+        />
+        <link rel="canonical" href="http://example.com" />
+      </Helmet>
+      <Navbar />
 
-      <motion.h1
-        className="Penetration-title-large"
-        initial={{ opacity: 0, y: -10 }} // Reduced y shift
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        Identify and Mitigate Security Risks
-      </motion.h1>
-
-      <motion.p
-        className="Penetration-description"
-        initial={{ opacity: 0, y: 10 }} // Reduced y shift
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        We provide vulnerability assessment and penetration testing that
-        includes a deep-dive analysis of your technology architecture to improve
-        component-level security while safeguarding critical data assets.
-      </motion.p>
-
-      <motion.div
-        className="get-started-btn-container"
-        initial={{ opacity: 0, scale: 0.95 }} // Reduce scale shift
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-        onClick={scrollToConsultationForm}
-      >
-        <button className="get-started-btn">Talk to Us</button>
-      </motion.div>
-    </motion.div>
-
-    <motion.div
-      className="Penetration-image"
-      initial={{ opacity: 0, x: 20 }} // Reduced x shift
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
-    >
-      <img src="/assets/vapt.svg" alt="Penetration Services" />
-    </motion.div>
-  </div>
-
-  {/* vapt cards */}
-  <div className="services-container-cards">
-    {services.map((service, index) => (
-      <motion.div
-        key={index}
-        className="service-card"
-        initial={{ opacity: 0, scale: 0.95, y: 10 }} // Reduced y shift and scale
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        <div className="image-container-cards">
-          <img src={service.imgSrc} alt={service.title} className="service-image" />
-        </div>
-        <div className="service-content">
-          <div className="icon-container">
-            <img src={service.iconSrc} alt={service.title} className="service-icon" />
-          </div>
-          <h3 className="service-title">{service.title}</h3>
-          <p className="service-description">{service.description}</p>
-          <Link to={service.link} className="service-link">
-            Read More &gt;
-          </Link>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-
-  <div className="feature-container">
-    <motion.img
-      className="Arrow-image"
-      src="/assets/Arrow-image.png"
-      alt="Features arrow"
-      initial={{ opacity: 0, y: -10 }} // Reduced y shift
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
-    />
-    <div className="feature-grid">
-      {features.map((feature, index) => (
+      <div className="Penetration-container">
         <motion.div
-          className="feature-card"
-          key={index}
-          initial={{ opacity: 0, y: 10 }} // Reduced y shift
-          whileInView={{ opacity: 1, y: 0 }}
+          className="Penetration-content"
+          initial={{ opacity: 0, x: -20 }} // Reduced initial x shift
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="feature-content">
-            <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
+          <motion.h4
+            className="Penetration-title-small"
+            initial={{ opacity: 0, y: -10 }} // Reduced y shift
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            Vulnerability Assessment / Penetration Testing (VAPT)
+          </motion.h4>
 
-  {/* Consultation Form */}
-  <div ref={consultationFormRef}>
-    <ConsultationForm />
-  </div>
-  <Footer />
-</div>
+          <motion.h1
+            className="Penetration-title-large"
+            initial={{ opacity: 0, y: -10 }} // Reduced y shift
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            Identify and Mitigate Security Risks
+          </motion.h1>
+
+          <motion.p
+            className="Penetration-description"
+            initial={{ opacity: 0, y: 10 }} // Reduced y shift
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            We provide vulnerability assessment and penetration testing that
+            includes a deep-dive analysis of your technology architecture to improve
+            component-level security while safeguarding critical data assets.
+          </motion.p>
+
+          <motion.div
+            className="get-started-btn-container"
+            initial={{ opacity: 0, scale: 0.95 }} // Reduce scale shift
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+            onClick={scrollToConsultationForm}
+          >
+            <button className="get-started-btn">Talk to Us</button>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="Penetration-image"
+          initial={{ opacity: 0, x: 20 }} // Reduced x shift
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <img src="/assets/vapt.svg" alt="Penetration Services" />
+        </motion.div>
+      </div>
+
+      {/* vapt cards */}
+      <div className="services-container-cards">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="service-card"
+            initial={{ opacity: 0, scale: 0.95, y: 10 }} // Reduced y shift and scale
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            <div className="image-container-cards">
+              <img src={service.imgSrc} alt={service.title} className="service-image" />
+            </div>
+            <div className="service-content">
+              <div className="icon-container">
+                <img src={service.iconSrc} alt={service.title} className="service-icon" />
+              </div>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
+              <Link to={service.link} className="service-link">
+                Read More &gt;
+              </Link>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="feature-container">
+        <div className="secure-steps-container">
+          <div className="steps-diagram">
+            {steps.map(({ step, title, icon }, index) => (
+              <motion.div
+                key={index}
+                className="step-item"
+                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }} // Delay for staggered effect
+              >
+                <div className="step-icon">{icon}</div>
+                <h3>Step {step}</h3>
+                <p>{title}</p>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            className="secure-message"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p>Secure your Data with Infoziant</p>
+          </motion.div>
+        </div>
+        <div className="feature-grid">
+          {features.map((feature, index) => (
+            <motion.div
+              className="feature-card"
+              key={index}
+              initial={{ opacity: 0, y: 10 }} // Reduced y shift
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <div className="feature-content">
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Consultation Form */}
+      <div ref={consultationFormRef}>
+        <ConsultationForm />
+      </div>
+      <Footer />
+    </div>
 
   );
 }

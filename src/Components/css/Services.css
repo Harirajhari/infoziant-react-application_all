@@ -1,7 +1,7 @@
 .services-section {
     text-align: center;
     padding: 3% 2%;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to right, #010b14, #000000);
 }
 
 .services-section h1 {
@@ -49,12 +49,12 @@
 
 .vertical-line-service {
     height: 300px;
-    width: 2px;
+    width: 1px;
     background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2%;
+    margin: 0% 2% 0 4%;
 }
 
 .item-id-servive {
@@ -75,10 +75,11 @@
 .service-text h3 {
     background: linear-gradient(90deg, #15F5BA, #0066ff);
     -webkit-background-clip: text;
-    text-align: center;
+    text-align: left;
     color: transparent;
     font-size: 25px;
     font-weight: 800;
+    padding-left: 4%;
 }
 
 .service-text ul {
@@ -226,10 +227,12 @@
     .service-text {
         width: 90%;
         font-size: 15px;
+        text-align: center;
     }
     .service-text h3{
         font-size: 1.2rem;
         margin-bottom: 2%;
+        text-align: center;
     }
 
     .arrow-btn {

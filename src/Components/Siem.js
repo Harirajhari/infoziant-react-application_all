@@ -7,7 +7,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { BsFillOctagonFill } from "react-icons/bs";
 import ConsultationForm from "./ConsultationForm";
 import ServiceCards from "./ServiceCards";
 import { Helmet } from "react-helmet";

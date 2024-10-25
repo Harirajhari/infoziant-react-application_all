@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/InquiryForm.css'; // Import the separated CSS
+import './css/Emailform.css'; // Import the separated CSS
 
 const EmailForm = ({ closeModal }) => {
     const [email, setEmail] = useState('');

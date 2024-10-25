@@ -140,7 +140,6 @@
         font-size: 1em;
         padding: 0.5rem 1rem; 
         max-width: 200px; 
-        float: left;
     }
 }
 
@@ -623,3 +622,181 @@ card-containerflipper */
     }
 }
 
+
+
+/* Arrow secure infoziant diagram */
+
+.secure-steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0e0e0e;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    margin-bottom:20px;
+    position: relative;
+}
+
+.steps-diagram {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255);
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    position: relative;
+    width: 150px;
+    margin: 0 15px;
+}
+
+.step-item:hover {
+    transform: translateY(-10px);
+    background-color: #222;
+}
+
+.step-item h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #00d4ff;
+}
+
+.step-item p {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #bbbbbb;
+    font-weight: 600;
+    text-align: center;
+}
+
+.step-icon {
+    font-size: 3.5em;
+    color: #00d4ff;
+    transition: color 0.3s ease-in-out;
+}
+
+.secure-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    z-index: 1;
+    width: 100%;
+}
+
+.steps-diagram .step-item:not(:last-child)::after {
+    content: '➔';
+    position: absolute;
+    right: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+.step-item:first-child::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.step-item:last-child::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0px;
+    height: 2px;
+    background-color: transparent;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .steps-diagram {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-item {
+        width: 90%;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .steps-diagram .step-item:not(:last-child)::after {
+        content: '';
+    }
+
+    .secure-message {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 820px) {
+    .steps-diagram {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .steps-diagram .step-item:not(:last-child)::after {
+        content: '';
+    }
+
+    .secure-message {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 821px) {
+    .steps-diagram {
+        flex-direction: row;
+    }
+
+    .step-item {
+        width: 150px;
+        margin: 0 15px;
+    }
+
+    .steps-diagram .step-item:not(:last-child)::after {
+        content: '➔';
+    }
+}

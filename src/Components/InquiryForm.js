@@ -1,102 +1,177 @@
-import React, { useState } from 'react';
-import './css/InquiryForm.css'; // Import the separated CSS
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { FaCircleCheck} from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
+import "./css/InquiryForm.css";
 
-const InquiryForm = ({ closeModal }) => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        address: '',
-        message: ''
-    });
+export default function InquiryForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    services: "",
+    message: ""
+  });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+  const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [submitConfirmation, setSubmitConfirmation] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Notify user about form submission
-        alert('Form submitted successfully!');
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" });
+  };
 
-        // Handle form submission logic (e.g., sending data to the server)
-        console.log('Form submitted:', formData);
+  // Validate form fields
+  const validateForm = () => {
+    let formErrors = {};
+    if (!formData.name) formErrors.name = "Name is required.";
+    if (!formData.email) formErrors.email = "Email is required.";
+    if (!formData.services) formErrors.services = "Please select a service.";
+    if (!formData.message) formErrors.message = "Message is required.";
+    setErrors(formErrors);
+    return Object.keys(formErrors).length === 0;
+  };
 
-        // Close the modal after submission
-        closeModal();
-    };
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitConfirmation(true)
+    if (validateForm()) {
+      const emailParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone_number: formData.phone,
+        selected_service: formData.services,
+        message: formData.message,
+      };
 
-    return (
-        <div className="overlay">
-            <div className="form-container">
-                {/* Close button */}
-                <button className="close-button" onClick={closeModal}>X</button>
-                <h2>Get Started with your Inquiry</h2>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name*"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email*"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number"
-                        value={formData.phone}
-                        onChange={handleChange}
-                    />
-                    <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleChange}
-                        required
-                    >
-                        <option value="">Select Service</option>
-                        <option value="Managed Security Services">Managed Security Services</option>
-                        <option value="Vulnerability Assessment / Penetration Testing">Vulnerability Assessment / Penetration Testing</option>
-                        <option value="Cloud Security">Cloud Security</option>
-                        <option value="Infrastructure Security Assessment">Infrastructure Security Assessment</option>
-                        <option value="Mobile Security Assessment">Mobile Security Assessment</option>
-                        <option value="Auditing">Auditing</option>
-                        <option value="Wireless Security Assessment">Wireless Security Assessment</option>
-                        <option value="Security Incident, Event Management & Threat Intelligence">
-                            Security Incident, Event Management & Threat Intelligence
-                        </option>
-                        <option value="Email Protection System">Email Protection System</option>
-                        <option value="Application Security Assessment">Application Security Assessment</option>
-                    </select>
+      emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        emailParams,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then((response) => {
+        if (response.status === 200) {
+            setSubmitConfirmation(false)
+          setSuccessMessage("Your request has been submitted successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            services: "",
+            message: ""
+          });
+          setTimeout(() => {
+            setSuccessMessage("");
+          }, 5000);
+        }
+      })
+      .catch((err) => {
+        setSubmitConfirmation(false)
+        console.error("Failed to send email. Error:", err);
+        alert("An error occurred while submitting your request. Please try again.");
+      });
+    }
+  };
 
-                    <input
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                        value={formData.address}
-                        onChange={handleChange}
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Message*"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    />
-                    <button type="submit" className="submit-button">Submit</button>
-                </form>
-            </div>
+  // Logic to close the form
+  const closeForm = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="consultation-section-i">
+      <div className="consultation-container-i">
+        <button className="close-button-i" onClick={closeForm}>
+          <FaTimes />
+        </button>
+        <h1 className="form-title-i">Get Started with your Inquiry</h1>
+        <p className="form-desc-i">
+          Are you looking for a solution to a confusing security issue? Ask our customer service team for assistance right away.
+        </p>
+
+        {/* Success message display */}
+        <div className="center-container-i">
+          {successMessage && <p className="success-message-i"><FaCircleCheck /> {successMessage}</p>}
         </div>
-    );
-};
 
-export default InquiryForm;
+        <form onSubmit={handleSubmit} className="consultation-form-i">
+          <div className="form-row-i">
+            <div className="form-left-i">
+              <div className="input-group-i">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name*"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="input-field-i"
+                />
+                {errors.name && <p className="error-message-i">{errors.name}</p>}
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="input-field-i"
+                />
+              </div>
+            </div>
+            <div className="form-right-i">
+              <div className="input-group-i">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="input-field-i"
+                />
+                {errors.email && <p className="error-message-i">{errors.email}</p>}
+                <select
+                  name="services"
+                  value={formData.services}
+                  onChange={handleChange}
+                  required
+                  className="input-field-i"
+                >
+                  <option value="" disabled>Select Services</option>
+                  <option value="Managed Security Services">Managed Security Services</option>
+                  <option value="Vulnerability Assessment / Penetration testing">Vulnerability Assessment / Penetration testing</option>
+                  <option value="Cloud Security">Cloud Security</option>
+                  <option value="Infrastructure Security Assessment">Infrastructure Security Assessment</option>
+                  <option value="Mobile Security Assessment">Mobile Security Assessment</option>
+                  <option value="Auditing">Auditing</option>
+                  <option value="Security Incident, Event Management and Threat Intelligence">Security Incident, Event Management and Threat Intelligence</option>
+                  <option value="Email Protection System">Email Protection System</option>
+                  <option value="Application Security">Application Security</option>
+                </select>
+                {errors.services && <p className="error-message-i">{errors.services}</p>}
+              </div>
+            </div>
+          </div>
+          <textarea
+            name="message"
+            placeholder="Enter message*"
+            required
+            value={formData.message}
+            onChange={handleChange}
+            className="input-field-i"
+          />
+          {errors.message && <p className="error-message-i">{errors.message}</p>}
+          <button type="submit" className="submit-button-i">{submitConfirmation ? "Submitting..." : "Submit"}</button>
+        </form>
+      </div>
+    </div>
+  );
+}

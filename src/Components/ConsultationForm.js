@@ -54,11 +54,12 @@ export default function ConsultationForm() {
 
       // Send email using EmailJS
       emailjs.send(
-        "service_3y1f5jd",
-        "template_ogyhrzo",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         emailParams,
-        "9PyRiP4Q1TaToDueT"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
+      
         .then((response) => {
           if (response.status === 200) {
             // Display success message
@@ -110,6 +111,7 @@ export default function ConsultationForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
+                  className="cf-inp"
                 />
                 {errors.name && <p className="error-message">{errors.name}</p>}
                 <input
@@ -118,6 +120,7 @@ export default function ConsultationForm() {
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleChange}
+                  className="cf-inp"
                 />
               </div>
             </div>
@@ -130,6 +133,7 @@ export default function ConsultationForm() {
                   required
                   value={formData.email}
                   onChange={handleChange}
+                  className="cf-inp"
                 />
                 {errors.email && <p className="error-message">{errors.email}</p>}
                 <select
@@ -137,6 +141,7 @@ export default function ConsultationForm() {
                   value={formData.services}
                   onChange={handleChange}
                   required
+                  className="cf-inp"
                 >
                   <option value="" disabled>Select Services</option>
                   <option value="Managed Security Services">Managed Security Services</option>
@@ -159,6 +164,7 @@ export default function ConsultationForm() {
             required
             value={formData.message}
             onChange={handleChange}
+            className="cf-inp"
           />
           {errors.message && <p className="error-message">{errors.message}</p>}
           <button type="submit" className="submit-button">Submit the Request</button>

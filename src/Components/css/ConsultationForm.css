@@ -86,11 +86,7 @@
     font-family: 'Jost', sans-serif;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-select,
-textarea {
+.cf-inp {
     padding: 1% 2%;
     margin: 15px 20px;
     border: 2px solid #ccc;
@@ -117,12 +113,6 @@ textarea {
     margin: 20px auto;
     font-family: 'Jost', sans-serif;
 }
-
-/* button:hover {
-    background-color: #f8b400;
-    border: 2px solid #00FFFF; 
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-} */
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -160,11 +150,7 @@ textarea {
         text-align: center;
     }
 
-    input[type="text"],
-    input[type="tel"],
-    input[type="email"],
-    select,
-    textarea {
+    .cf-inp {
         font-size: 15px; 
         margin: 5px 10px;
         width: 90%;
