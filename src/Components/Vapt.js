@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import "./css/Vapt.css";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-
-import { FaCloud, FaFileAlt, FaTachometerAlt, FaCheckCircle, FaCogs, FaShieldAlt } from 'react-icons/fa';
+import { FaSearch, FaFileAlt, FaTachometerAlt, FaCheckCircle, FaCogs, FaShieldAlt } from 'react-icons/fa';
 
 export default function Vapt() {
 
@@ -109,14 +108,15 @@ export default function Vapt() {
     },
   ];
 
-  const steps = [
-    { step: 1, title: 'Discover & Crawl', icon: <FaCloud /> },
-    { step: 2, title: 'Assess Risk', icon: <FaFileAlt /> },
-    { step: 3, title: 'Detect', icon: <FaTachometerAlt /> },
-    { step: 4, title: 'Resolve', icon: <FaCheckCircle /> },
-    { step: 5, title: 'Integrate', icon: <FaCogs /> },
-    { step: 6, title: 'Continuously Secure', icon: <FaShieldAlt /> }
-  ];
+  
+    const steps = [
+      { step: 1, title: 'Discover & Crawl', icon: <FaSearch color="#1E90FF" size="3rem" /> },
+      { step: 2, title: 'Assess Risk', icon: <FaFileAlt color="#32CD32" size="3rem" /> },
+      { step: 3, title: 'Detect', icon: <FaTachometerAlt color="#FF8C00" size="3rem" /> },
+      { step: 4, title: 'Resolve', icon: <FaCheckCircle color="#00FF00" size="3rem" /> },
+      { step: 5, title: 'Integrate', icon: <FaCogs color="#FFD700" size="3rem" /> },
+      { step: 6, title: 'Continuously Secure', icon: <FaShieldAlt color="#FF1493" size="3rem" /> },
+    ];
 
   return (
     <div className="App-vapt">
@@ -222,31 +222,32 @@ export default function Vapt() {
       </div>
 
       <div className="feature-container">
-        <div className="secure-steps-container">
-          <div className="steps-diagram">
-            {steps.map(({ step, title, icon }, index) => (
-              <motion.div
-                key={index}
-                className="step-item"
-                whileInView={{ opacity: 1, scale: 1 }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }} // Delay for staggered effect
-              >
-                <div className="step-icon">{icon}</div>
-                <h3>Step {step}</h3>
-                <p>{title}</p>
-              </motion.div>
-            ))}
-          </div>
+      <div className="secure-steps-container">
+      <div className="steps-diagram">
+        {steps.map(({ step, title, icon }, index) => (
           <motion.div
-            className="secure-message"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
+            key={index}
+            className="step-item"
+            initial={{ opacity: 0, y: 20 }} // Start off invisible and slightly below
+            whileInView={{ opacity: 1, y: 0 }} // Animate to visible and original position when in view
+            transition={{
+              duration: 0.5, // Duration of the animation
+              delay: index * 0.3, // Sequential delay based on index
+              ease: "easeInOut" // Smooth transition
+            }} 
+            viewport={{ once: false, amount: 0.3 }} // Trigger animation when 30% of the component is visible
           >
-            <p>Secure your Data with Infoziant</p>
+            <div className="step-icon">{icon}</div>
+            <h3>Step {step}</h3>
+            <p>{title}</p>
           </motion.div>
-        </div>
+        ))}
+      </div>
+      <div className="secure-message">
+        <p>Secure your Data with Infoziant</p>
+      </div>
+    </div>
+
         <div className="feature-grid">
           {features.map((feature, index) => (
             <motion.div

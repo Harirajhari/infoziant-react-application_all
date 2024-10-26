@@ -650,6 +650,7 @@ card-containerflipper */
     padding: 0 20px;
 }
 
+/* Step Item */
 .step-item {
     display: flex;
     flex-direction: column;
@@ -658,17 +659,33 @@ card-containerflipper */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 255, 255);
-    transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
     position: relative;
     width: 150px;
     margin: 0 15px;
+    transition: transform 0.4s ease, background-color 0.3s ease;
+    animation: settleBack 0.3s ease forwards; 
 }
 
+/* Animation for hover */
+@keyframes liftUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+/* Animation to return to position smoothly */
+@keyframes settleBack {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(0); }
+}
+
+/* Hover effect */
 .step-item:hover {
-    transform: translateY(-10px);
+    animation: liftUp 0.4s ease forwards;
     background-color: #222;
 }
+
+
 
 .step-item h3 {
     margin-top: 15px;
